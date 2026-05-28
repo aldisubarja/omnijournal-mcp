@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnijournal-mcp"
+version = "0.1.0"
+description = "Unified academic research MCP server with broad open-source coverage"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "A via Hermes Agent"}]
+dependencies = [
+  "fastmcp>=2.0.0",
+  "httpx>=0.28.0",
+  "pydantic>=2.8.0",
+  "tenacity>=9.0.0",
+  "PyMuPDF>=1.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "pytest-asyncio>=0.23.0",
+]
+
+[project.scripts]
+omnijournal-mcp = "omnijournal.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = "-q"
