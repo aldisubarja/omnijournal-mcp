@@ -3,12 +3,13 @@
 Unified academic research MCP server.
 
 ## Features
-- Parallel meta-search across OpenAlex, Crossref, Semantic Scholar, arXiv, Europe PMC, and DBLP
+- Parallel meta-search across PubMed, OpenAlex, Crossref, Semantic Scholar, arXiv, Europe PMC, DBLP, OpenReview, bioRxiv, CORE, and Unpaywall
 - Unified normalized paper schema
-- DOI/author/keyword search detection
+- DOI/author/keyword/arXiv/PMID search detection
 - Related papers, citations, references
 - OA-first PDF download
 - Bibliography generation
+- 11 providers, 12 tools
 
 ## Install
 ```bash
